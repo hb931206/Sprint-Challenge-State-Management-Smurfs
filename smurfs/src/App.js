@@ -7,9 +7,10 @@ import SmurfList from "./components/SmurfList";
 import SmurfForm from "./components/SmurfForm";
 
 function App(props) {
-  useEffect(() => {
-    props.getSmurfs();
-  }, []);
+  // useEffect(() => {
+  //   props.getSmurfs();
+  // }, []);
+  props.getSmurfs();
 
   return (
     <div>
@@ -18,6 +19,6 @@ function App(props) {
     </div>
   );
 }
-const mapStatToProps = (state) => ({});
+const mapStateToProps = (state) => ({});
 
-export default connect(mapStatToProps, { getSmurfs })(App);
+export default connect(mapStateToProps, { getSmurfs })(App);

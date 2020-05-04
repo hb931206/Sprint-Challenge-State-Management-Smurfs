@@ -1,11 +1,4 @@
-import {
-  FETCHING_SMURFS_START,
-  FETCHING_SMURFS_SUCCESS,
-  FETCHING_SMURFS_FAILED,
-  ADDING_SMURF,
-  ADDED_SMURF,
-  ADD_SMURF_FAILED,
-} from "../actions";
+import { FETCHING_SMURFS_SUCCESS } from "../actions";
 
 const initialState = {
   smurf: { name: "", age: "", height: "" },
