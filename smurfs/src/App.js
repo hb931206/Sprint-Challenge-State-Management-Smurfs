@@ -1,13 +1,20 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getSmurfs } from "./actions/index";
 import "./App.css";
 import SmurfList from "./components/SmurfList";
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.getSmurfs();
+  }, []);
+
   return (
     <div>
       <SmurfList />
     </div>
   );
 }
+const mapStatToProps = (state) => ({});
 
-export default App;
+export default connect(mapStatToProps, { getSmurfs })(App);

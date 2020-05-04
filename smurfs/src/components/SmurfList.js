@@ -1,28 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getSmurfs } from "../actions/getSmurfs";
+import { getSmurfs } from "../actions";
 
-const SmurfList = (getSmurfs, smurfs, isFetching) => {
-  if (isFetching) {
-    return <h2> Coming with the village</h2>;
-  } else {
-    return (
+const SmurfList = (props) => {
+  return (
+    <div>
+      <h1>Smurfs List</h1>
       <div>
-        <h1> Our Village</h1>
-        <div>
-          {smurfs.map((smurf) => (
-            <p>{smurf.name}</p>
-          ))}
-        </div>
+        {props.smurfs.map((smurf) => (
+          <div classname="smurfs">
+            <h3>Name: {smurf.name}</h3>
+            <h3>Age: {smurf.age}</h3>
+            <h3>Height: {smurf.height}</h3>
+          </div>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    smurfs: state.smurfs,
-    isFetching: state.isFetching,
-  };
-};
-export default connect(mapStateToProps, { getSmurfs })(SmurfList);
+const mapStateToProps = (state) => ({
+  smurfs: state.smurfs,
+});
+export default connect(mapStateToProps, {})(SmurfList);
