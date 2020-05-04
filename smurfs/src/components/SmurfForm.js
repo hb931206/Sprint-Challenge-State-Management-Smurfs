@@ -12,6 +12,7 @@ const SmurfForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addSmurf(newSmurf);
+    window.location.reload();
   };
 
   const handleChange = (e) => {
@@ -22,7 +23,7 @@ const SmurfForm = (props) => {
   };
 
   return (
-    <div>
+    <div className="form">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -40,7 +41,7 @@ const SmurfForm = (props) => {
         />
         <input
           type="text"
-          place="Height"
+          placeholder="Height"
           name="height"
           value={props.height}
           onChange={handleChange}

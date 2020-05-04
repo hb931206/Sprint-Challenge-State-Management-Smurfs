@@ -1,4 +1,4 @@
-import { FETCHING_SMURFS_SUCCESS } from "../actions";
+import { FETCHING_SMURFS_SUCCESS, ADDED_SMURF } from "../actions";
 
 const initialState = {
   smurf: { name: "", age: "", height: "" },

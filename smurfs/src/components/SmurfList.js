@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 const SmurfList = (props) => {
   return (
     <div>
-      <h1>Smurfs List</h1>
       <div>
         {props.smurfs.map((smurf) => (
           <div className="smurfs">

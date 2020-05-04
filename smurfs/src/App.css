@@ -6,7 +6,12 @@ h1 {
 }
 
 .smurfs {
+  text-align: center;
   background-color: purple;
   color: white;
   border: 5px solid blue;
+}
+
+form {
+  margin: 2.5% 0%;
 }

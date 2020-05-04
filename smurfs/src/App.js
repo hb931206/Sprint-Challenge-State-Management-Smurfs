@@ -7,15 +7,15 @@ import SmurfList from "./components/SmurfList";
 import SmurfForm from "./components/SmurfForm";
 
 function App(props) {
-  // useEffect(() => {
-  //   props.getSmurfs();
-  // }, []);
-  props.getSmurfs();
+  useEffect(() => {
+    props.getSmurfs();
+  }, []);
 
   return (
     <div>
-      <SmurfList />
+      <h1>Smurf Village</h1>
       <SmurfForm />
+      <SmurfList />
     </div>
   );
 }
